@@ -24,6 +24,9 @@ left: 0
 wym06mY9On22TYC98Ihd
 lg:col-span-2
 
+hCIY7bbFNxv6Si_u31Wf
+lg:grid-cols-4
+
 RV8RoaI_SlEMC5CEQ3ms
 mx-auto
 
@@ -271,6 +274,9 @@ dark:hover:bg-gray-600
 zhRMeqbg7JsftloqW_W6
 py-2
 
+__Iv72FadFpzwcpFl5_5
+space-y-3
+
 ttxtqsLWp2pFRX8yUvWd
 block
 
@@ -285,6 +291,9 @@ bg-gray-50
 
 _fU_qFiBpx8XncfylZLc
 w-auto
+
+Y46Wpo9_BAWI3OQBHUjI
+bottom-2.5
 
 _pwSRUXRHN5bHphyTRKz
 h-8
@@ -610,8 +619,35 @@ z-10
 ADhvqXKjAizJqFADNpvd
 inline-block
 
+czGmoDY2lMQ_0SyND3x7
 lg:block
-lg:block
+
+hoaz4HQabD9bAPZFqnLC
+md:hidden
+
+v4BixjmUnwud_Hihloof
+md:w-auto
+
+Y1c5KM8Icth9fc6G_12r
+md:flex-1
+
+JjES8TQ5Z_2srg5bfGvr
+md:order-2
+
+okhDJJkrPl6gRKS8Pggz
+sm:py-8
+
+_QTZoyfBxp7a_kW1eWQq
+lg:gap-12
+
+nLhohPz5FpffXM9RSdFT
+w-6
+
+_XD2a764x49B1E2F9f8X
+h-6
+
+oUQle5765ka0Ch4Ejk_8
+max-h-72
 
 
 
@@ -671,6 +707,8 @@ w-full
 
 // check last/ later
 __CB1NVTb04MHxDxK6Hw
+
+yHlultZNYA9toOP4bD_k
 
 n1tXEtF2vB0vuuhfmfgM
 
