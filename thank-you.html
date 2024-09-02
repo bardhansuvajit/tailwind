@@ -1,0 +1,816 @@
+<!doctype html>
+<html class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { "50": "#eff6ff", "100": "#dbeafe", "200": "#bfdbfe", "300": "#93c5fd", "400": "#60a5fa", "500": "#3b82f6", "600": "#2563eb", "700": "#1d4ed8", "800": "#1e40af", "900": "#1e3a8a", "950": "#172554" }
+                    }
+                },
+                fontFamily: {
+                    'body': [
+                        'Inter',
+                        'ui-sans-serif',
+                        'system-ui',
+                        '-apple-system',
+                        'system-ui',
+                        'Segoe UI',
+                        'Roboto',
+                        'Helvetica Neue',
+                        'Arial',
+                        'Noto Sans',
+                        'sans-serif',
+                        'Apple Color Emoji',
+                        'Segoe UI Emoji',
+                        'Segoe UI Symbol',
+                        'Noto Color Emoji'
+                    ],
+                    'sans': [
+                        'Inter',
+                        'ui-sans-serif',
+                        'system-ui',
+                        '-apple-system',
+                        'system-ui',
+                        'Segoe UI',
+                        'Roboto',
+                        'Helvetica Neue',
+                        'Arial',
+                        'Noto Sans',
+                        'sans-serif',
+                        'Apple Color Emoji',
+                        'Segoe UI Emoji',
+                        'Segoe UI Symbol',
+                        'Noto Color Emoji'
+                    ]
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="dark:bg-gray-800 dark:text-slate-300">
+    <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+        <div class="mx-auto max-w-2xl px-4 2xl:px-0">
+
+            <div class="flex justify-center mx-auto items-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-green-100 dark:bg-teal-900 mb-8">
+                <svg class="w-8 h-8 sm:w-12 sm:h-12 text-green-800 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"></path>
+                </svg>                      
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl mb-2">Thanks for your order!</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-6 md:mb-8">Your order <a href="#" class="font-medium text-gray-900 dark:text-white hover:underline">#7564804</a> will be processed within 24 hours during working days. We will notify you by email once your order has been shipped.</p>
+
+            <div class="space-y-4 sm:space-y-2 rounded-lg border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800 mb-6 md:mb-8">
+                <dl class="sm:flex items-center justify-between gap-4">
+                    <dt class="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Order Date</dt>
+                    <dd class="font-medium text-gray-900 dark:text-white sm:text-end">14 May 2024</dd>
+                </dl>
+                <dl class="sm:flex items-center justify-between gap-4">
+                    <dt class="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Payment Method</dt>
+                    <dd class="font-medium text-gray-900 dark:text-white sm:text-end">JPMorgan monthly installments</dd>
+                </dl>
+                <dl class="sm:flex items-center justify-between gap-4">
+                    <dt class="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Name</dt>
+                    <dd class="font-medium text-gray-900 dark:text-white sm:text-end">Flowbite Studios LLC</dd>
+                </dl>
+                <dl class="sm:flex items-center justify-between gap-4">
+                    <dt class="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Address</dt>
+                    <dd class="font-medium text-gray-900 dark:text-white sm:text-end">34 Scott Street, San Francisco, California, USA</dd>
+                </dl>
+                <dl class="sm:flex items-center justify-between gap-4">
+                    <dt class="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Phone</dt>
+                    <dd class="font-medium text-gray-900 dark:text-white sm:text-end">+(123) 456 7890</dd>
+                </dl>
+                <dl class="sm:flex items-center justify-between gap-4">
+                    <dt class="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Email</dt>
+                    <dd class="font-medium text-gray-900 dark:text-white sm:text-end">name@company.com</dd>
+                </dl>
+                <dl class="sm:flex items-center justify-between gap-4">
+                    <dt class="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Estimated delivery</dt>
+                    <dd class="font-medium text-green-600 dark:text-green-400 sm:text-end">Wednesday, May 15</dd>
+                </dl>
+            </div>
+
+            <!-- <h3 class="text-xl font-semibold text-gray-900 dark:text-white">1. Select the product you want to repair:</h3> -->
+
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-800 mb-6 md:mb-8">
+                <div class="flex items-center gap-8 p-6 sm:items-start lg:items-center">
+                <div>
+                    <input id="product1" type="checkbox" value="" class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+                    <label for="product1" class="sr-only"> Product 1 </label>
+                </div>
+
+                <div class="min-w-0 flex-1 gap-14 xl:flex xl:items-center">
+                    <div class="min-w-0 max-w-xl flex-1 gap-6 sm:flex sm:items-center">
+                    <a href="#" class="mb-4 flex aspect-square h-14 w-14 shrink-0 items-center sm:mb-0">
+                        <img class="h-auto max-h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg" alt="imac image" />
+                        <img class="hidden h-auto max-h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg" alt="imac image" />
+                    </a>
+                    <a href="#" class="mt-4 font-medium text-gray-900 hover:underline dark:text-white sm:mt-0"> PC system All in One APPLE iMac (2023) mqrq3ro/a, Apple M3, 24" Retina 4.5K, 8GB, SSD 256GB, 10-core GPU</a>
+                    </div>
+
+                    <div class="mt-4 flex shrink-0 flex-col gap-2 sm:flex-row sm:justify-between md:items-center xl:mt-0 xl:flex-col xl:items-start">
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400 xl:w-36">Order Number:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <a href="#" class="hover:underline">#73742364</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-base font-normal text-gray-500 dark:text-gray-400 xl:w-36">Return Term:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">21.07.2023</dd>
+                    </dl>
+                    </div>
+                </div>
+                </div>
+
+                <div class="flex items-center gap-8 p-6 sm:items-start lg:items-center">
+                <div>
+                    <input id="product2" type="checkbox" value="" class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+                    <label for="product2" class="sr-only"> Product 2 </label>
+                </div>
+
+                <div class="min-w-0 flex-1 gap-14 xl:flex xl:items-center">
+                    <div class="min-w-0 max-w-xl flex-1 gap-6 sm:flex sm:items-center">
+                    <a href="#" class="mb-4 flex aspect-square h-14 w-14 shrink-0 items-center sm:mb-0">
+                        <img class="h-auto max-h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg" alt="imac image" />
+                        <img class="hidden h-auto max-h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg" alt="imac image" />
+                    </a>
+                    <a href="#" class="mt-4 font-medium text-gray-900 hover:underline dark:text-white sm:mt-0"> Restored Apple Watch Series 8 (GPS) 41mm Midnight Aluminum Case with Midnight Sport Band </a>
+                    </div>
+
+                    <div class="mt-4 flex shrink-0 flex-col gap-2 sm:flex-row sm:justify-between md:items-center xl:mt-0 xl:flex-col xl:items-start">
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Order Number:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <a href="#" class="hover:underline">#45632736</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Return Term:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">26.07.2023</dd>
+                    </dl>
+                    </div>
+                </div>
+                </div>
+
+                <div class="flex items-center gap-8 p-6 sm:items-start lg:items-center">
+                <div>
+                    <input checked id="product3" type="checkbox" value="" class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+                    <label for="product3" class="sr-only"> Product 3 </label>
+                </div>
+
+                <div class="min-w-0 flex-1 gap-14 xl:flex xl:items-center">
+                    <div class="min-w-0 max-w-xl flex-1 gap-6 sm:flex sm:items-center">
+                    <a href="#" class="mb-4 flex aspect-square h-14 w-14 shrink-0 items-center sm:mb-0">
+                        <img class="h-auto max-h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-light.svg" alt="imac image" />
+                        <img class="hidden h-auto max-h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-dark.svg" alt="imac image" />
+                    </a>
+                    <a href="#" class="mt-4 font-medium text-gray-900 hover:underline dark:text-white sm:mt-0"> Sony Playstation 5 Digital Edition Console with Extra Blue Controller, and White PULSE 3D Headset </a>
+                    </div>
+
+                    <div class="mt-4 flex shrink-0 flex-col gap-2 sm:flex-row sm:justify-between md:items-center xl:mt-0 xl:flex-col xl:items-start">
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Order Number:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <a href="#" class="hover:underline">#54628495</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Return Term:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">24.07.2023</dd>
+                    </dl>
+                    </div>
+                </div>
+                </div>
+
+                <div class="flex items-center gap-8 p-6 sm:items-start lg:items-center">
+                <div>
+                    <input id="product4" type="checkbox" value="" class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+                    <label for="product4" class="sr-only"> Product 4 </label>
+                </div>
+
+                <div class="min-w-0 flex-1 gap-14 xl:flex xl:items-center">
+                    <div class="min-w-0 max-w-xl flex-1 gap-6 sm:flex sm:items-center">
+                    <a href="#" class="mb-4 flex aspect-square h-14 w-14 shrink-0 items-center sm:mb-0">
+                        <img class="h-auto max-h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-light.svg" alt="imac image" />
+                        <img class="hidden h-auto max-h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-dark.svg" alt="imac image" />
+                    </a>
+                    <a href="#" class="mt-4 font-medium text-gray-900 hover:underline dark:text-white sm:mt-0"> APPLE iPhone 15 5G phone, 256GB, Gold </a>
+                    </div>
+
+                    <div class="mt-4 flex shrink-0 flex-col gap-2 sm:flex-row sm:justify-between md:items-center xl:mt-0 xl:flex-col xl:items-start">
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Order Number:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <a href="#" class="hover:underline">#64534294</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Return Term:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">26.07.2023</dd>
+                    </dl>
+                    </div>
+                </div>
+                </div>
+
+                <div class="flex items-center gap-8 p-6 sm:items-start lg:items-center">
+                <div>
+                    <input id="product5" type="checkbox" value="" class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+                    <label for="product5" class="sr-only"> Product 5 </label>
+                </div>
+
+                <div class="min-w-0 flex-1 gap-14 xl:flex xl:items-center">
+                    <div class="min-w-0 max-w-xl flex-1 gap-6 sm:flex sm:items-center">
+                    <a href="#" class="mb-4 flex aspect-square h-14 w-14 shrink-0 items-center sm:mb-0">
+                        <img class="h-auto max-h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/xbox-light.svg" alt="imac image" />
+                        <img class="hidden h-auto max-h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/xbox-dark.svg" alt="imac image" />
+                    </a>
+                    <a href="#" class="mt-4 font-medium text-gray-900 hover:underline dark:text-white sm:mt-0"> Xbox Series X Diablo IV Bundle + Xbox Wireless Controller Carbon Black + Dual Controller Charge Docker </a>
+                    </div>
+
+                    <div class="mt-4 flex shrink-0 flex-col gap-2 sm:flex-row sm:justify-between md:items-center xl:mt-0 xl:flex-col xl:items-start">
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Order Number:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <a href="#" class="hover:underline">#98475625</a>
+                        </dd>
+                    </dl>
+
+                    <dl class="flex items-center gap-2.5">
+                        <dt class="text-gray-500 dark:text-gray-400 xl:w-36">Return Term:</dt>
+                        <dd class="text-base font-normal text-gray-500 dark:text-gray-400">21.07.2023</dd>
+                    </dl>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Track your order</a>
+                <a href="#" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Return to shopping</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12">
+        <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+            <!-- Heading & Filters -->
+            <div class="mb-4 items-end justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
+                <div>
+                    <h2 class="mt-3 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Recommended for you</h2>
+                </div>
+            </div>
+
+            <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
+                <div
+                    class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                    <div class="h-56 w-full">
+                        <a href="#">
+                            <img class="mx-auto h-full dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg" alt="" />
+                            <img class="mx-auto hidden h-full dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg" alt="" />
+                        </a>
+                    </div>
+                    <div class="pt-6">
+                        <div class="mb-4 flex items-center justify-between gap-4">
+                            <span
+                                class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+                                Up to 35% off </span>
+
+                            <div class="flex items-center justify-end gap-1">
+                                <button type="button" data-tooltip-target="tooltip-quick-look"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Quick look </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-quick-look" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Quick look
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+
+                                <button type="button" data-tooltip-target="tooltip-add-to-favorites"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Add to Favorites </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-add-to-favorites" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Add to favorites
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Apple
+                            iMac 27", 1TB HDD, Retina 5K Display, M3 Max</a>
+
+                        <div class="mt-2 flex items-center gap-2">
+                            <div class="flex items-center">
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+                            </div>
+
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">5.0</p>
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">(455)</p>
+                        </div>
+
+                        <ul class="mt-2 flex items-center gap-4">
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Fast Delivery</p>
+                            </li>
+
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                        d="M8 7V6c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-1M3 18v-7c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1Zm8-3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Best Price</p>
+                            </li>
+                        </ul>
+
+                        <div class="mt-4 flex items-center justify-between gap-4">
+                            <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">$1,699</p>
+
+                            <button type="button"
+                                class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                    <div class="h-56 w-full">
+                        <a href="#">
+                            <img class="mx-auto h-full dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-light.svg" alt="" />
+                            <img class="mx-auto hidden h-full dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-dark.svg" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="mb-4 flex items-center justify-between gap-4">
+                            <span
+                                class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+                                Up to 15% off </span>
+
+                            <div class="flex items-center justify-end gap-1">
+                                <button type="button" data-tooltip-target="tooltip-quick-look-2"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Quick look </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-quick-look-2" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Quick look
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+
+                                <button type="button" data-tooltip-target="tooltip-add-to-favorites-2"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Add to Favorites </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-add-to-favorites-2" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Add to favorites
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Apple
+                            iPhone 15 Pro Max, 256GB, Blue Titanium</a>
+
+                        <div class="mt-2 flex items-center gap-2">
+                            <div class="flex items-center">
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+                            </div>
+
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">4.9</p>
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">(1,233)</p>
+                        </div>
+
+                        <ul class="mt-2 flex items-center gap-4">
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Best Seller</p>
+                            </li>
+
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                        d="M8 7V6c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-1M3 18v-7c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1Zm8-3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Best Price</p>
+                            </li>
+                        </ul>
+
+                        <div class="mt-4 flex items-center justify-between gap-4">
+                            <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">$1,199</p>
+
+                            <button type="button"
+                                class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                    <div class="h-56 w-full">
+                        <a href="#">
+                            <img class="mx-auto h-full dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-light.svg" alt="" />
+                            <img class="mx-auto hidden h-full dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-dark.svg" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="mb-4 flex items-center justify-between gap-4">
+                            <span
+                                class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+                                Up to 35% off </span>
+
+                            <div class="flex items-center justify-end gap-1">
+                                <button type="button" data-tooltip-target="tooltip-quick-look-3"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Quick look </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-quick-look-3" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Quick look
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+
+                                <button type="button" data-tooltip-target="tooltip-add-to-favorites-3"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Add to Favorites </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-add-to-favorites-3" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Add to favorites
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">iPad
+                            Pro 13-Inch (M4): XDR Display, 512GB</a>
+
+                        <div class="mt-2 flex items-center gap-2">
+                            <div class="flex items-center">
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+                            </div>
+
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">4.9</p>
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">(879)</p>
+                        </div>
+
+                        <ul class="mt-2 flex items-center gap-4">
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Shipping Today</p>
+                            </li>
+
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                        d="M8 7V6c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-1M3 18v-7c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1Zm8-3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Best Price</p>
+                            </li>
+                        </ul>
+
+                        <div class="mt-4 flex items-center justify-between gap-4">
+                            <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">$799</p>
+
+                            <button type="button"
+                                class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                    <div class="h-56 w-full">
+                        <a href="#">
+                            <img class="mx-auto h-full dark:hidden"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-light.svg" alt="" />
+                            <img class="mx-auto hidden h-full dark:block"
+                                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-dark.svg" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="mb-4 flex items-center justify-between gap-4">
+                            <span
+                                class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+                                Up to 10% off </span>
+
+                            <div class="flex items-center justify-end gap-1">
+                                <button type="button" data-tooltip-target="tooltip-quick-look-4"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Quick look </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
+                                        <path stroke="currentColor" stroke-width="2"
+                                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-quick-look-4" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Quick look
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+
+                                <button type="button" data-tooltip-target="tooltip-add-to-favorites-4"
+                                    class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only"> Add to Favorites </span>
+                                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z" />
+                                    </svg>
+                                </button>
+                                <div id="tooltip-add-to-favorites-4" role="tooltip"
+                                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                                    data-popper-placement="top">
+                                    Add to favorites
+                                    <div class="tooltip-arrow" data-popper-arrow=""></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">PlayStation®5
+                            Console – 1TB, PRO Controller</a>
+
+                        <div class="mt-2 flex items-center gap-2">
+                            <div class="flex items-center">
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+
+                                <svg class="h-4 w-4 text-yellow-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                                </svg>
+                            </div>
+
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">4,8</p>
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">(2,957)</p>
+                        </div>
+
+                        <ul class="mt-2 flex items-center gap-4">
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Fast Delivery</p>
+                            </li>
+
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                        d="M8 7V6c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-1M3 18v-7c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1Zm8-3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Best Price</p>
+                            </li>
+                        </ul>
+
+                        <div class="mt-4 flex items-center justify-between gap-4">
+                            <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">$499</p>
+
+                            <button type="button"
+                                class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
