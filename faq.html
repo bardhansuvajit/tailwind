@@ -57,62 +57,6 @@
             }
         }
     </script>
-
-    <style>
-        .dark [type=checkbox]:checked, .dark [type=radio]:checked, [type=checkbox]:checked, [type=radio]:checked {
-            background-color: currentColor;
-            background-position: 50%;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            border-color: transparent;
-        }
-
-        .dark ul li a:hover svg {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255/var(--tw-text-opacity));
-        }
-
-        .custom-1 {
-            clip: rect(0,0,0,0);
-            border-width: 0;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            white-space: nowrap;
-            width: 1px
-        }
-
-        #myCartDropdown1 {
-            position: absolute;
-            inset: 0px auto auto 0px;
-            width: 300px;
-            z-index: 1000;
-            transform: translate(-32%, 10%);
-        }
-
-        /* Responsive adjustments */
-        @media screen and (max-width: 768px) {
-            #myCartDropdown1 {
-                width: 90vw;
-                right: 5vw;
-                left: auto;
-                transform: translateX(0);
-                top: 60px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            #myCartDropdown1 {
-                width: 100vw;
-                right: 0;
-                /* left: 0;
-                top: 80px; */
-                transform: translateX(0);
-            }
-        }
-    </style>
 </head>
 <body>
     <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
