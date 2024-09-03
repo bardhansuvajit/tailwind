@@ -49,16 +49,16 @@ let lastScrollPosition = 0;
 
 window.addEventListener('scroll', function() {
     let currentScrollPosition = window.scrollY;
+    console.log(`currentScrollPosition>> ${currentScrollPosition}`);
     let navbar = document.getElementById('navbar');
 
     if (currentScrollPosition > lastScrollPosition) {
         navbar.style.top = '-85px';
-        console.log('User is scrolling down');
-    } else if (currentScrollPosition < lastScrollPosition) {
-        console.log('User is scrolling up');
+        // console.log('User is scrolling down');
+    } else if (currentScrollPosition < 50) {
+        navbar.style.top = '0px';
     }
 
-    // Update the last scroll position to the current position
     lastScrollPosition = currentScrollPosition;
 });
 
