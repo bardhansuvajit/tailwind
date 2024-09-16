@@ -25,10 +25,7 @@
     outline-offset: 2px
 }
 
-.dark [type=checkbox]:checked,
-.dark [type=radio]:checked,
-[type=checkbox]:checked,
-[type=radio]:checked {
+.dark [type=checkbox]:checked, .dark [type=radio]:checked, [type=checkbox]:checked, [type=radio]:checked {
     background-color: currentColor;
     background-position: 50%;
     background-repeat: no-repeat;

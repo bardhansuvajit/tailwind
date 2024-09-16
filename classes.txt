@@ -54,6 +54,9 @@ mb-4
 neyUwteEn7DOg9pBSJJE
 items-center
 
+e7U_bm2YzmHTdXgdisqA
+mb-0.5
+
 _WclR59Ji8jwfmjPtOei
 justify-center
 
@@ -241,6 +244,9 @@ _chPjFVKOPRcMolL9C9r
 max-w-md
 max-w-screen-md
 
+XklWzT8y98pp042XEQp4
+text-xs
+
 _BIVSYBXQUqEf_ltPrSk
 dark:border-gray-600
 
@@ -261,6 +267,9 @@ p-2
 
 I7Z0pJZDvcGRUC0iizCG
 text-start
+
+yFAsiu26MUcycUf9RwrL
+hover:bg-gray-50
 
 _xQT_qSXfwWf6ZhwRle4
 hover:text-gray-900
@@ -338,7 +347,7 @@ FQJBolKGENZMnnBWg95Y
 divide-y-2
 
 _JhddqALGzNXF3JHzSyG
-divide-gray-100
+divide-gray-100     OR      border-gray-200 (checked-this matches)
 
 ltPMSn_g3PKyqeS8vmZk
 shadow-sm
@@ -379,8 +388,17 @@ overflow-y-auto
 yjGyQxv8jnYk9_MGMqLN
 bg-white
 
+n8e6ORKgPTnY6zgs5HS7
+rounded-full
+
+fGULyrX3v9TS2am2Wk6K
+h-7
+
 hM2PsyapB3ZlimNA_SlB
 px-2
+
+PJD8Rj8ZmfldJGExe8Fx
+text-left
 
 GpKin9KMvZIpP25gk0Qi
 pt-2
@@ -417,9 +435,6 @@ px-3
 
 fwbd3ngJ52C0GdFCKBPM
 w-72
-
-_JhddqALGzNXF3JHzSyG
-border-gray-200
 
 WoQqugRcWrYbmsWhxCUr
 dark:divide-gray-600
@@ -655,6 +670,21 @@ cursor-pointer
 Ir_3keQp2U_tRwFg0MKl
 sr-only
 
+GbuoIVQvgE1sPez3FB0O
+dark:hover:bg-gray-800
+
+_bKyZ1er5YE_NnrwOCm9
+focus:ring-gray-200
+
+_gmxfZ2BpOHxa6nWwqBB
+mr-2
+
+HMfQov_yvpcryT2VjE29
+w-7
+
+_ai51jxW84YycfjuGyBg
+w-48
+
 
 
 
@@ -717,6 +747,6 @@ yHlultZNYA9toOP4bD_k
 n1tXEtF2vB0vuuhfmfgM
 
 __8kBLtrR_iuU2wW25Lp
-ring-gray-700    OR    dark:focus:ring-gray-700
+ring-gray-700    OR    dark:focus:ring-gray-700 (correct one-checked)
 
 Usqns9w__onp5CWoXDJ0
