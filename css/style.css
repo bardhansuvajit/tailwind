@@ -70,7 +70,6 @@ button, input, optgroup, select, textarea {
     border-color: transparent;
 }
 
-
 [type=checkbox],[type=radio] {
     color-adjust: exact;
     --tw-shadow: 0 0 #0000;

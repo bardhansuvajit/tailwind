@@ -490,6 +490,9 @@ shadow
 LYMps1kO2vF8HBymW3az
 font-semibold
 
+_uoqSE9tPqjx_6qY1WDg
+flex-1
+
 jun44eGV0wwWvqmK3BQp
 aspect-[1/1]
 
