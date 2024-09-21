@@ -169,31 +169,10 @@ button, input, optgroup, select, textarea {
     width: 1px
 }
 
-#myCartDropdown1 {
-    position: absolute;
-    inset: 0px auto auto 0px;
-    width: 300px;
-    z-index: 1000;
-    transform: translate(-32%, 10%);
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    #myCartDropdown1 {
-        width: 90vw;
-        right: 5vw;
-        left: auto;
-        transform: translateX(0);
-        top: 60px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #myCartDropdown1 {
-        width: 100vw;
-        right: 0;
-        /* left: 0;
-        top: 80px; */
-        transform: translateX(0);
-    }
+.dropdown-menu {
+    inset: auto auto auto 0px;
+    right: 1vw;
+    left: auto;
+    /* top: calc(100% - 0.75rem); */
+    transform: translateX(0);
 }
