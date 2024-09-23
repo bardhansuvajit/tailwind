@@ -169,10 +169,9 @@ button, input, optgroup, select, textarea {
     width: 1px
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
     inset: auto auto auto 0px;
     right: 1vw;
     left: auto;
-    /* top: calc(100% - 0.75rem); */
     transform: translateX(0);
-}
+} */

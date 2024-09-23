@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (savedDrawerState === sidebarWidth) {
             drawer.style.width = sidebarWidth;
             mainContent.classList.remove('md:ml-64');
-            mainContent.classList.add('md:ml-20');
+            mainContent.classList.add('md:ml-16');
 
             drawerFooter.classList.remove('flex');
             drawerFooter.classList.add('grid');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             drawerFooter.classList.add('space-y-2');
         } else {
             drawer.style.width = '256px';
-            mainContent.classList.remove('md:ml-20');
+            mainContent.classList.remove('md:ml-16');
             mainContent.classList.add('md:ml-64');
 
             drawerFooter.classList.remove('grid');
@@ -113,14 +113,14 @@ document.addEventListener('DOMContentLoaded', function() {
             else {
                 if (drawer.style.width === sidebarWidth) {
                     drawer.style.width = '256px';
-                    mainContent.classList.remove('md:ml-20');
+                    mainContent.classList.remove('md:ml-16');
                     mainContent.classList.add('md:ml-64');
 
                     localStorage.setItem('drawerState', '256px');
                 } else {
                     drawer.style.width = sidebarWidth;
                     mainContent.classList.remove('md:ml-64');
-                    mainContent.classList.add('md:ml-20');
+                    mainContent.classList.add('md:ml-16');
 
                     localStorage.setItem('drawerState', sidebarWidth);
                 }
@@ -140,9 +140,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dropdownToggles.forEach(toggle => {
         const targetDropdownId = toggle.getAttribute('data-dropdown-toggle');
+        const targetDropdownAlign = toggle.getAttribute('data-dropdown-align');
         const dropdownMenu = document.getElementById(targetDropdownId);
 
-        toggle.addEventListener('click', function () {
+        toggle.addEventListener('click', function() {
+            if (targetDropdownAlign === "up") {
+                dropdownMenu.classList.add('absolute', 'w-max', 'text-start', 'bottom-4', 'left-0');
+            } else {
+                dropdownMenu.classList.add('absolute', 'w-max', 'text-start', 'top-4', 'right-0');
+            }
+            dropdownMenu.classList.toggle('hidden');
+            dropdownMenu.classList.toggle('block');
+        });
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function (event) {
+        dropdownToggles.forEach(toggle => {
+            const targetDropdownId = toggle.getAttribute('data-dropdown-toggle');
+            const dropdownMenu = document.getElementById(targetDropdownId);
+            
+            if (!toggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+                dropdownMenu.classList.remove('block');
+            }
+        });
+    });
+
+    /*
+    const dropdownToggles = document.querySelectorAll('[data-dropdown-toggle]');
+
+    dropdownToggles.forEach(toggle => {
+        const targetDropdownId = toggle.getAttribute('data-dropdown-toggle');
+        const dropdownMenu = document.getElementById(targetDropdownId);
+
+        toggle.addEventListener('click', function() {
             dropdownMenu.classList.add('absolute', 'w-max');
             dropdownMenu.classList.toggle('hidden');
             dropdownMenu.classList.toggle('block');
@@ -195,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    */
 
 
 
@@ -212,11 +245,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (collapseMenu.classList.contains('block') && collapseIcon) {
                 // Change the collapse-icon to an up arrow
-                // collapseIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 -960 960 960" fill="currentColor"><path d="M480-496 296-312l-88-88 272-272 272 272-88 88-184-184Z"/></svg>`;
-                collapseIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 -960 960 960" fill="currentColor"><path d="m480-520.35-184 184L232.35-400 480-647.65 727.65-400 664-336.35l-184-184Z"/></svg>`;
+                collapseIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 -960 960 960" fill="currentColor"><path d="m480-520.35-184 184L232.35-400 480-647.65 727.65-400 664-336.35l-184-184Z"/></svg>`;
             } else if (collapseIcon) {
                 // Change the collapse-icon back to a down arrow
-                collapseIcon.innerHTML = `<svg aria-hidden="true" class="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>`;
+                collapseIcon.innerHTML = `<svg aria-hidden="true" class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>`;
             }
         });
     });
